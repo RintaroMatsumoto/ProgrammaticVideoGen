@@ -28,3 +28,16 @@ desktop.ini
 
 # Temp
 tmp_*
+
+# Large assets (PSD, WAV, PNG composites)
+*.psd
+public/audio/
+public/composited/
+public/animated/
+public/frames/
+public/check/
+public/zundamon_parts/
+src/assets/ずんだもん立ち絵素材2.3/
+src/assets/四国めたん立ち絵素材2.1/
+src/assets/zundamon_parts/
+src/assets/audio/

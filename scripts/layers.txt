@@ -1,0 +1,46 @@
+
+=== !口 ===
+  '*ほあー'  visible=True
+  '*ほあ'  visible=False
+  '*ほー'  visible=False
+  '*むふ'  visible=False
+  '*△'  visible=False
+  '*んあー'  visible=False
+  '*んへー'  visible=False
+  '*んー'  visible=False
+  '*はへえ'  visible=False
+  '*おほお'  visible=False
+  '*お'  visible=False
+  '*ゆ'  visible=False
+  '*むー'  visible=False
+
+=== !顔色 ===
+  'かげり'  visible=False
+  '*(非表示)'  visible=False
+  '*青ざめ'  visible=False
+  '*ほっぺ赤め'  visible=False
+  '*ほっぺ2'  visible=False
+  '*ほっぺ'  visible=True
+
+=== !目 ===
+  '*ぐるぐる'  visible=False
+  '*〇〇'  visible=False
+  '*><'  visible=False
+  '*UU'  visible=False
+  '*にっこり2'  visible=False
+  '*にっこり'  visible=False
+  '*なごみ目'  visible=False
+  '*ジト目'  visible=False
+  '*細め目'  visible=False
+  '*細め目ハート'  visible=False
+  '*上向き3'  visible=False
+  '*上向き2'  visible=False
+  '*上向き'  visible=False
+  '*目セット'  visible=True
+
+=== !眉 ===
+  '*困り眉2'  visible=False
+  '*困り眉1'  visible=False
+  '*上がり眉'  visible=False
+  '*怒り眉'  visible=True
+  '*普通眉'  visible=False

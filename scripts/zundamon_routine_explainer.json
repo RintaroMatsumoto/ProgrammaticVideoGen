@@ -1,0 +1,78 @@
+{
+  "title": "クロードのルーティーンって何？",
+  "speaker_id": 3,
+  "scenes": [
+    {
+      "id": 1,
+      "text": "みなさんこんにちはなのだ！ずんだもんなのだ！",
+      "expression": { "eyes": "にっこり", "mouth": "ほあー", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "基本" },
+      "subtitle": "みなさんこんにちは！ずんだもんなのだ！"
+    },
+    {
+      "id": 2,
+      "text": "今日はクロードのルーティーンについて解説するのだ！",
+      "expression": { "eyes": "目セット", "mouth": "んあー", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "指差し" },
+      "subtitle": "今日はクロードのルーティーンについて解説するのだ！"
+    },
+    {
+      "id": 3,
+      "text": "ルーティーンっていうのは、クロードが自動でタスクを実行してくれる機能なのだ。",
+      "expression": { "eyes": "目セット", "mouth": "お", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "指差し" },
+      "subtitle": "ルーティーンとは、クロードが自動でタスクを実行してくれる機能！"
+    },
+    {
+      "id": 4,
+      "text": "例えば、毎朝フリーランスの案件を自動で探してきてくれるのだ！すごいのだ！",
+      "expression": { "eyes": "にっこり2", "mouth": "ほあー", "eyebrows": "上がり眉", "face_color": "ほっぺ赤め", "arm_left": "手を挙げる", "arm_right": "手を挙げる" },
+      "subtitle": "例えば、毎朝フリーランスの案件を自動で探してくれる！"
+    },
+    {
+      "id": 5,
+      "text": "トリガーは3種類あるのだ。エーピーアイ、スケジュール、そしてギットハブなのだ。",
+      "expression": { "eyes": "目セット", "mouth": "お", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "指差し" },
+      "subtitle": "トリガーは3種類：API・スケジュール・GitHub"
+    },
+    {
+      "id": 6,
+      "text": "エーピーアイトリガーは、外部からリクエストを送ると実行されるのだ。",
+      "expression": { "eyes": "目セット", "mouth": "んー", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "考える", "arm_right": "基本" },
+      "subtitle": "APIトリガー → 外部からリクエストで実行"
+    },
+    {
+      "id": 7,
+      "text": "スケジュールトリガーは、決まった時間に自動実行なのだ。朝6時に案件チェックとかできるのだ！",
+      "expression": { "eyes": "にっこり", "mouth": "ほあー", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "指差し" },
+      "subtitle": "スケジュールトリガー → 決まった時間に自動実行！"
+    },
+    {
+      "id": 8,
+      "text": "ギットハブトリガーは、コードがプッシュされたら自動で動くのだ。",
+      "expression": { "eyes": "目セット", "mouth": "お", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "基本", "arm_right": "基本" },
+      "subtitle": "GitHubトリガー → コードPushで自動実行"
+    },
+    {
+      "id": 9,
+      "text": "しかもクラウドで動くから、パソコンの電源を切っていても大丈夫なのだ！",
+      "expression": { "eyes": "にっこり2", "mouth": "ほあー", "eyebrows": "上がり眉", "face_color": "ほっぺ赤め", "arm_left": "手を挙げる", "arm_right": "手を挙げる" },
+      "subtitle": "クラウド実行だからPCオフでもOK！"
+    },
+    {
+      "id": 10,
+      "text": "プロプランだと1日5回、マックスプランだと1日15回使えるのだ。",
+      "expression": { "eyes": "目セット", "mouth": "んー", "eyebrows": "普通眉", "face_color": "ほっぺ", "arm_left": "考える", "arm_right": "基本" },
+      "subtitle": "Pro: 1日5回 / Max: 1日15回"
+    },
+    {
+      "id": 11,
+      "text": "フリーランスの自動化にめちゃくちゃ使えるのだ！みんなも試してみてほしいのだ！",
+      "expression": { "eyes": "にっこり", "mouth": "ほあー", "eyebrows": "上がり眉", "face_color": "ほっぺ赤め", "arm_left": "手を挙げる", "arm_right": "手を挙げる" },
+      "subtitle": "フリーランス自動化にめちゃくちゃ使える！試してみて！"
+    },
+    {
+      "id": 12,
+      "text": "ご視聴ありがとうなのだ！チャンネル登録よろしくなのだ！",
+      "expression": { "eyes": "にっこり2", "mouth": "ほあー", "eyebrows": "普通眉", "face_color": "ほっぺ赤め", "arm_left": "基本", "arm_right": "マイク" },
+      "subtitle": "ご視聴ありがとう！チャンネル登録よろしくなのだ！"
+    }
+  ]
+}

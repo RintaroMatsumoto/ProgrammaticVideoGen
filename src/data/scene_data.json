@@ -1,0 +1,151 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "scenes": [
+    {
+      "id": 1,
+      "duration": 3.56,
+      "text": "みなさんこんにちは！ずんだもんなのだ！",
+      "audio": "scene_01.wav",
+      "eyes": "にっこり",
+      "mouth": "ほあー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "基本"
+    },
+    {
+      "id": 2,
+      "duration": 3.67,
+      "text": "今日はクロードのルーティーンについて解説するのだ！",
+      "audio": "scene_02.wav",
+      "eyes": "普通目",
+      "mouth": "んあー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "指差し"
+    },
+    {
+      "id": 3,
+      "duration": 5.70,
+      "text": "ルーティーンとは、クロードが自動でタスクを実行してくれる機能！",
+      "audio": "scene_03.wav",
+      "eyes": "普通目",
+      "mouth": "お",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "指差し"
+    },
+    {
+      "id": 4,
+      "duration": 6.43,
+      "text": "例えば、毎朝フリーランスの案件を自動で探してくれる！",
+      "audio": "scene_04.wav",
+      "eyes": "にっこり2",
+      "mouth": "ほあー",
+      "eyebrows": "上がり眉",
+      "face_color": "ほっぺ赤め",
+      "arm_left": "手を挙げる",
+      "arm_right": "手を挙げる"
+    },
+    {
+      "id": 5,
+      "duration": 6.57,
+      "text": "トリガーは3種類：API・スケジュール・GitHub",
+      "audio": "scene_05.wav",
+      "eyes": "普通目",
+      "mouth": "お",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "指差し"
+    },
+    {
+      "id": 6,
+      "duration": 5.32,
+      "text": "APIトリガー → 外部からリクエストで実行",
+      "audio": "scene_06.wav",
+      "eyes": "普通目",
+      "mouth": "んー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "考える",
+      "arm_right": "基本"
+    },
+    {
+      "id": 7,
+      "duration": 7.49,
+      "text": "スケジュールトリガー → 決まった時間に自動実行！",
+      "audio": "scene_07.wav",
+      "eyes": "にっこり",
+      "mouth": "ほあー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "指差し"
+    },
+    {
+      "id": 8,
+      "duration": 4.73,
+      "text": "GitHubトリガー → コードPushで自動実行",
+      "audio": "scene_08.wav",
+      "eyes": "普通目",
+      "mouth": "お",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "基本",
+      "arm_right": "基本"
+    },
+    {
+      "id": 9,
+      "duration": 5.62,
+      "text": "クラウド実行だからPCオフでもOK！",
+      "audio": "scene_09.wav",
+      "eyes": "にっこり2",
+      "mouth": "ほあー",
+      "eyebrows": "上がり眉",
+      "face_color": "ほっぺ赤め",
+      "arm_left": "手を挙げる",
+      "arm_right": "手を挙げる"
+    },
+    {
+      "id": 10,
+      "duration": 6.01,
+      "text": "Pro: 1日5回 / Max: 1日15回",
+      "audio": "scene_10.wav",
+      "eyes": "普通目",
+      "mouth": "んー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ",
+      "arm_left": "考える",
+      "arm_right": "基本"
+    },
+    {
+      "id": 11,
+      "duration": 5.70,
+      "text": "フリーランス自動化にめちゃくちゃ使える！試してみて！",
+      "audio": "scene_11.wav",
+      "eyes": "にっこり",
+      "mouth": "ほあー",
+      "eyebrows": "上がり眉",
+      "face_color": "ほっぺ赤め",
+      "arm_left": "手を挙げる",
+      "arm_right": "手を挙げる"
+    },
+    {
+      "id": 12,
+      "duration": 4.39,
+      "text": "ご視聴ありがとう！チャンネル登録よろしくなのだ！",
+      "audio": "scene_12.wav",
+      "eyes": "にっこり2",
+      "mouth": "ほあー",
+      "eyebrows": "普通眉",
+      "face_color": "ほっぺ赤め",
+      "arm_left": "基本",
+      "arm_right": "マイク"
+    }
+  ]
+}
