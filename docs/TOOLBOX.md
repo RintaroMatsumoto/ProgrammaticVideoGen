@@ -102,7 +102,65 @@ cd /d <作業ディレクトリ> && python script.py
 - Cowork の SKILL.md (pptx) を参照するのが最善
 - HTML/CSS でカスタムプレゼンを作る場合は別途設計
 
-## 8. 外部サービス・API
+## 8. ずんだもん動画パイプライン ノウハウ
+
+### 8.1 全体フロー
+```
+スクリプトJSON → VOICEVOX API → WAVファイル
+                                     ↓
+PSD (psd-tools) → 表情切替 → psd.composite() → キャラPNG
+                                                    ↓
+                                    Remotion (Img + Audio + Sequence) → MP4
+```
+
+### 8.2 PSD立ち絵の鉄則
+
+| 鉄則 | 理由 |
+|------|------|
+| レイヤー名は必ず `check_layers.py` で実物を確認 | 「普通目」ではなく「目セット」等、作者固有の命名がある。推測で書くと表情パーツが消える (#8) |
+| 合成は `psd.composite()` 一択 | 手動 `alpha_composite()` はレイヤー順序を正確に再現できずパーツ消失・重なり破綻が起きる |
+| 表情切替は `child.visible` のトグル | グループ内の全childを `False` にしてから対象だけ `True` にする |
+| 腕レイヤーは `!服装1` グループ内 | `*左手_基本`, `*右手_指差し` 等、プレフィックスで左右区別 |
+
+### 8.3 PSDレイヤー名 クイックリファレンス（ずんだもん2.3）
+```
+!目: 目セット(default), にっこり, にっこり2, ジト目, なごみ目, 細め目, 細め目ハート,
+     上向き, 上向き2, 上向き3, ぐるぐる, 〇〇, UU, ><
+!口: ほあー(default), ほあ, ほー, むふ, △, んあー, んへー, んー, はへえ, おほお, お, ゆ, むー
+!眉: 怒り眉(default), 普通眉, 上がり眉, 困り眉1, 困り眉2
+!顔色: ほっぺ(default), ほっぺ2, ほっぺ赤め, 青ざめ, かげり, (非表示)
+```
+※ レイヤー名には `*` プレフィックスがつく（例: `*目セット`）
+
+### 8.4 VOICEVOX操作
+```python
+# audio_query → synthesis の2段階
+query = POST /audio_query?text={text}&speaker={speaker_id}
+wav   = POST /synthesis?speaker={speaker_id}  body=query_json
+```
+- ずんだもん speaker_id: 3(ノーマル), 1(あまあま), 7(ツンツン), 5(セクシー) 等
+- `run.exe` を直接起動するとエンジンのみ。GUI不要ならこちらが軽い
+- APIの準備待ちにはポーリングループを入れること
+
+### 8.5 Remotion構成
+- 各シーン = `<Sequence>` で囲む。`from` と `durationInFrames` で制御
+- キャラ画像は **事前に1枚のPNGにcomposite済み** のものを `<Img>` で表示。個別パーツをRemotionで合成しようとすると読み込みレースコンディションでパーツが消える
+- リップシンク: 口開き/口閉じの2枚PNGを `Math.floor(frame / 4) % 2` で交互切替
+- バウンス: `Math.sin(frame * 0.08) * 4` で呼吸風の揺れ
+- 登場: `spring()` で scale 0.9→1.0 + translateY 40→0
+
+### 8.6 よくあるトラブルと対処
+
+| 症状 | 原因 | 対処 |
+|------|------|------|
+| 特定シーンで目/口/眉が消える | JSONの表情名とPSDレイヤー名の不一致 | `check_layers.py` で正しい名前を確認 |
+| 福笑い状態（パーツ位置ずれ） | 個別PNG抽出時にbounding boxでクリップされた | `Image.new(full_size)` + `paste(cropped, (layer.left, layer.top))` でフルキャンバス配置 |
+| パーツが不安定に消える/出る | 手動alpha_compositeでレイヤー順序が逆 | `psd.composite()` に切り替え |
+| cmd.exeで日本語git commitが壊れる | cmd.exeのcp932エンコーディング | `.py` に書き出して `subprocess.run()` 経由 |
+| cmd.exeで日本語printが文字化け | 同上 | ファイルに `encoding='utf-8'` で書き出して Read tool で読む |
+| Remotionレンダリングがタイムアウト | Desktop Commanderの60sデフォルト制限 | `timeout_ms` を短くして起動後 `read_process_output` でポーリング |
+
+## 9. 外部サービス・API
 
 | サービス | 用途 | 注意事項 |
 |----------|------|----------|
@@ -116,7 +174,7 @@ cd /d <作業ディレクトリ> && python script.py
 | Payoneer / Wise | 海外送金 | #159 アカウント未開設 |
 | freee | 会計・確定申告 | API連携未実装 (#117) |
 
-## 9. りんたろうくんの作業スタイル（再確認）
+## 10. りんたろうくんの作業スタイル（再確認）
 
 - 全ファイル編集・git操作・ワークフロー実行を Claude に委任
 - 自分ではコマンドを実行しない
@@ -125,7 +183,7 @@ cd /d <作業ディレクトリ> && python script.py
 - 直接的でフランクなコミュニケーション、理由のある反論には建設的に応じる
 - 急かさない。「一本ずつ、急がないこと」
 
-## 10. セキュリティ
+## 11. セキュリティ
 
 - `.env` は絶対に Git にコミットしない
 - API キー・トークンは環境変数経由
