@@ -28,6 +28,11 @@ desktop.ini
 
 # Temp
 tmp_*
+.tmp_*
+.cache/
+
+# Plugin build artefacts
+dist/
 
 # Large assets (PSD, WAV, PNG composites)
 *.psd
