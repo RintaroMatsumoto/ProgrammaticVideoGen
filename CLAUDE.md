@@ -1,5 +1,13 @@
 # CLAUDE.md — ProgrammaticVideoGen
 
+## セッション冒頭で必ず目を通すファイル
+
+- [`docs/TOOLBOX.md`](docs/TOOLBOX.md) — 環境の地雷対策（DC・cmd・git 周り）
+- [`docs/CONVENTIONS.md`](docs/CONVENTIONS.md) — 用語集・ペルソナ・帰属テンプレート
+- [`docs/adr/`](docs/adr/) — 重要決定の履歴（Remotion / VOICEVOX / BGM など）
+- 作業中の領域に応じて、直下の `CLAUDE.md` も読む（例：`scripts/ukiyoe/CLAUDE.md`）
+- `.claude/commands/` — プロジェクト固有のスラッシュコマンド
+
 ## プロジェクト概要
 Remotion + Claude Code によるプログラマティック動画生成。
 クライアント案件（explainer video, product demo, motion graphics）の納品物を
